@@ -5,7 +5,7 @@ test.each([
   ['4570662332484145', true],
   ['6763481944301702', false],
 ])('testing methodLuna', (test, exp) => {
-  expect(methodLuna(test)).toBe(exp);
+  expect(methodLuna(test.split(''))).toBe(exp);
 });
 
 test.each([

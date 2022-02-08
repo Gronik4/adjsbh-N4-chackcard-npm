@@ -1,10 +1,8 @@
+import './css/style.css';
 import { methodLuna, validating } from './js/hendler';
 
 const btns = document.getElementById('btns');
 const btnr = document.getElementById('btnr');
-
-btns.addEventListener('click', hendlerSub);
-btnr.addEventListener('click', hendlerRes);
 
 function hendlerSub(e) {
   e.preventDefault();
@@ -49,5 +47,8 @@ function hendlerRes() {
   const outpRes = document.getElementById('res');
   outputValid.innerHTML = '';
   outpRes.innerHTML = '';
-  document.querySelectorAll('.img_item').forEach((item) => { item.style.opacity = 0.2; });
+  document.querySelectorAll('.img_item').forEach((item) => { item.style.opacity = 0.2; }); // eslint-disable-line
 }
+
+btns.addEventListener('click', hendlerSub);
+btnr.addEventListener('click', hendlerRes);
